@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Flow</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Goal Flow</h1>
+            <button id="new-goal-btn">+ New Goal</button>
+        </header>
+        
+        <div class="stats-summary">
+            <div class="stat-card">
+                <h3>Active Goals</h3>
+                <p id="active-goals-count">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Completion Rate</h3>
+                <p id="completion-rate">0%</p>
+            </div>
+        </div>
+        
+        <div class="goals-container" id="goals-list">
+            <!-- Goals will be added here dynamically -->
+        </div>
+    </div>
+    
+    <!-- New Goal Modal -->
+    <div class="modal" id="goal-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create New Goal</h2>
+            <form id="goal-form">
+                <input type="text" id="goal-title" placeholder="Goal title" required>
+                <textarea id="goal-description" placeholder="Description"></textarea>
+                <button type="submit">Create Goal</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="scripts/app.js"></script>
+</body>
+</html>
